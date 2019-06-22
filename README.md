@@ -189,8 +189,7 @@ $HOME/powershell/7-preview/pwsh
 
 ## Links
 [PowerShell Core Releases](https://github.com/PowerShell/PowerShell/releases)<br>
-[Build your first .NET Core app](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)<br>
-[dotNET Core 3.0 SDK - Linux ARM32 Binaries (v3.0.100-preview6)](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-preview6-linux-arm32-binaries)<br>
+[.NET Core SDK installation tutorial for Turris Omnia](https://github.com/KUTlime/Installation-of-dotNET-Core-to-Turris-Omnia-LXC-Container/blob/master/README.md)<br>
 
 ## Credits
 
