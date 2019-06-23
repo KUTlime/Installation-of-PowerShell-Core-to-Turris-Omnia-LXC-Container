@@ -1,5 +1,5 @@
 # Installation of PowerShell Core to Turris Omnia LXC Container
-> This repo is a step-by-step tutorial how to install PowerShell Core to Turris Omnia LXC container. It's aiming to Windows/PowerShell orientied users which not familiar with SSH/Bash enviroment and the official tutorials are driving them crazy.
+> This repo is a step-by-step tutorial how to install PowerShell Core to Turris Omnia LXC container. It's aiming to Windows/PowerShell orientied users which not familiar with SSH/Bash enviroment and the official tutorials from CZ.NIC are driving them crazy.
 
 ## Overview
 
@@ -21,7 +21,7 @@ lxc-create -t download -n PSCore
 - Release: **Stretch**
 - Architecture: **armv7l** (that is seven and the lower "L" letter, not 1 (digit)
 
-Alternatively, you can use LuCI to create the LXC container. A distribution doesn't not really matter. This tutorial was tested on Debian but it would work more likely on other distribution.
+Alternatively, you can use LuCI to create the LXC container. A distribution doesn't not really matter. This tutorial was tested on Debian but it would work more likely on other distributions.
 
 ## 2. Simple Debian configuration
 
@@ -31,7 +31,7 @@ Start the container from LuCI or by executing this command:
 lxc-start -n PSCore
 ```
 
-Connect to container:
+Connect to the container:
 
 ```
 lxc-attach -n PSCore
@@ -41,22 +41,18 @@ Install prerequisites:
 
 ```
 apt-get update
-apt-get install sudo
-apt-get install nano
-apt-get install wget
-apt-get install libunwind8
-apt-get install git-core openssh-server rsync sudo fakeroot cifs-utils -y
+apt-get install git-core openssh-server rsync sudo fakeroot cifs-utils nano wget libunwind8 icu-devtools -y
 ```
 
 SSH is not really necessary but it may become handy sooner or later.
 
-Change hostname (for eg. `PSCore`):
+Change the container hostname (for eg. `PSCore`):
 
 ```
 nano /etc/hostname
 ```
 
-Set new hostname to localhost:
+Set the new hostname to localhost:
 
 ```
 nano /etc/hosts
@@ -93,7 +89,7 @@ and if your setup was successful, you should see: **root@PSCore:~#** in your ter
 
 ## 3. Deployment of PowerShell Core libraries to LXC container
 
-Now, let's create a directory for PowerShell Core and step into it.
+Now, let's create a directory for PowerShell Core and set path to it.
 
 ```
 mkdir -p $HOME/powershell/7-preview && cd $HOME/powershell
@@ -105,7 +101,7 @@ Now, you can download the PowerShell Core binaries:
 wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.1/powershell-7.0.0-preview.1-linux-arm32.tar.gz
 ```
 
-You can customize this link to whatever version of PowerShell you want, just don't forget to change a specific path (*name of last directory, 7-preview in our case*) for each specific version of PowerShell Core in previous and following command:
+You can customize this link to whatever version of PowerShell you want. Don't forget to change a specific path (*name of last directory, 7-preview in our case*) in previous and following command for each specific version of PowerShell Core you wish to run:
 
 ```
 tar zxf ./powershell-7.0.0-preview.1-linux-arm32.tar.gz -C $HOME/powershell/7-preview
@@ -161,7 +157,7 @@ https://aka.ms/pscore6-docs
 Type 'help' to get help.
 ```
 
-go ahead and try the **Hello world** write to console.
+go ahead and try the **Hello world** cmdlet to write to the console.
 
 ```
 Write-Host "Hello World!"
@@ -189,7 +185,6 @@ $HOME/powershell/7-preview/pwsh
 
 ## Links
 [PowerShell Core Releases](https://github.com/PowerShell/PowerShell/releases)<br>
-[.NET Core SDK installation tutorial for Turris Omnia](https://github.com/KUTlime/Installation-of-dotNET-Core-to-Turris-Omnia-LXC-Container/blob/master/README.md)<br>
 
 ## Credits
 
