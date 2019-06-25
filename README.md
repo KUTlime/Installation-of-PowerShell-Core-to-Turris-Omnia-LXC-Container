@@ -185,6 +185,7 @@ $HOME/powershell/7-preview/pwsh
 
 ## Links
 [PowerShell Core Releases](https://github.com/PowerShell/PowerShell/releases)<br>
+[How to deploy .NET Core SDK to LXC Turris Container](https://github.com/KUTlime/Installation-of-dotNET-Core-to-Turris-Omnia-LXC-Container)
 
 ## Credits
 
