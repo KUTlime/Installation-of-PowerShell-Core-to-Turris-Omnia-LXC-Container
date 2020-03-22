@@ -94,7 +94,7 @@ and if your setup was successful, you should see: **root@PSCore:~#** in your ter
 Now, let's create a directory for PowerShell Core and set path to it.
 
 ```
-mkdir -p $HOME/powershell/7-preview && cd $HOME/powershell
+mkdir -p $HOME/powershell/7 && cd $HOME/powershell
 ```
 
 Now, you can download the PowerShell Core binaries:
