@@ -13,6 +13,8 @@ The installation consists of these steps:
 ## 1. Create Debian LXC container
 
 Connect to your Turrins Omnia router by SSH and create the LXC container for PowerShell Core. **[Official Manual](https://www.turris.cz/doc/en/howto/lxc)**
+
+**Note**: If you don't see any templates in LuCI or you recieve [this](https://forum.turris.cz/t/lxc-container-no-templates/5296/17) error, just change your DNS settings in Foris from whatever you have there to Cloudface or anything else. The problem is caused by DNS which is not resolving template URL correctly.
 ```
 lxc-create -t download -n PSCore
 ```
