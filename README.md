@@ -100,13 +100,13 @@ mkdir -p $HOME/powershell/7-preview && cd $HOME/powershell
 Now, you can download the PowerShell Core binaries:
 
 ```
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.0-preview.1/powershell-7.0.0-preview.1-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-arm32.tar.gz
 ```
 
-You can customize this link to whatever version of PowerShell you want. Don't forget to change a specific path (*name of last directory, 7-preview in our case*) in previous and following command for each specific version of PowerShell Core you wish to run:
+You can customize this link to whatever version of PowerShell you want. Don't forget to change a specific path (*name of last directory, 7 in our case*) in previous and following command for each specific version of PowerShell Core you wish to run:
 
 ```
-tar zxf ./powershell-7.0.0-preview.1-linux-arm32.tar.gz -C $HOME/powershell/7-preview
+tar zxf ./powershell-7.0.0-linux-arm32.tar.gz -C $HOME/powershell/7
 ```
 
 For an easy use of PowerShell, you can execute:
@@ -117,7 +117,7 @@ nano ~/.bashrc
 
 and enter these lines at the end of the file:
 ```
-export PATH=$PATH:$HOME/powershell/7-preview
+export PATH=$PATH:$HOME/powershell/7
 ```
 
 This will create powershell environmental variables everytime when you log in to the container by SSH. **If you have plans to run multiple PowerShell Core version side-by-side, I would avoid the manipulation with the enviroment variables and just use a full path classification.**
@@ -152,7 +152,7 @@ pwsh
 if you see following outcome (*it may change overtime*)
 
 ```
-PowerShell 7.0.0-preview.1
+PowerShell 7.0.0
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 https://aka.ms/pscore6-docs
@@ -176,13 +176,13 @@ congratulation! You have fully operational PowerShell Core up and running in the
 If you receive the error "bash: pwsh: command not found" navigate manually to it:
 
 ```
-cd $HOME/powershell/7-preview/
+cd $HOME/powershell/7/
 ```
 
 and execute the `pwsh` command here. Alternatively, you can use the full path classification:
 
 ```
-$HOME/powershell/7-preview/pwsh
+$HOME/powershell/7/pwsh
 ```
 
 ## Links
