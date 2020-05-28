@@ -1,5 +1,5 @@
 # Installation of PowerShell Core to Turris Omnia LXC Container
-> This repo is a step-by-step tutorial how to install PowerShell Core to Turris Omnia LXC container. It's aiming to Windows/PowerShell orientied users which not familiar with SSH/Bash enviroment and the official tutorials from CZ.NIC are driving them crazy.
+> This repo is a step-by-step tutorial how to install PowerShell Core to Turris Omnia LXC container. It's aiming to Windows/PowerShell oriented users which not familiar with SSH/Bash environment and the official tutorials from CZ.NIC are driving them crazy.
 
 ## Overview
 
@@ -12,9 +12,9 @@ The installation consists of these steps:
 
 ## 1. Create Debian LXC container
 
-Connect to your Turrins Omnia router by SSH and create the LXC container for PowerShell Core. **[Official Manual](https://www.turris.cz/doc/en/howto/lxc)**
+Connect to your Turris Omnia router by SSH and create the LXC container for PowerShell Core. **[Official Manual](https://www.turris.cz/doc/en/howto/lxc)**
 
-**Note**: If you don't see any templates in LuCI or you recieve [this](https://forum.turris.cz/t/lxc-container-no-templates/5296/17) error, just change your DNS settings in Foris from whatever you have there to Cloudface or anything else. The problem is caused by DNS which is not resolving template URL correctly.
+**Note**: If you don't see any templates in LuCI or you receive [this](https://forum.turris.cz/t/lxc-container-no-templates/5296/17) error, just change your DNS settings in Foris from whatever you have there to Cloudface or anything else. The problem is caused by DNS which is not resolving template URL correctly.
 ```
 lxc-create -t download -n PSCore
 ```
@@ -120,7 +120,7 @@ and enter these lines at the end of the file:
 export PATH=$PATH:$HOME/powershell/7
 ```
 
-This will create powershell environmental variables everytime when you log in to the container by SSH. **If you have plans to run multiple PowerShell Core version side-by-side, I would avoid the manipulation with the enviroment variables and just use a full path classification.**
+This will create powershell environmental variables every time when you log in to the container by SSH. **If you have plans to run multiple PowerShell Core version side-by-side, I would avoid the manipulation with the environment variables and just use a full path classification.**
 
 Now, you can execute:
 
