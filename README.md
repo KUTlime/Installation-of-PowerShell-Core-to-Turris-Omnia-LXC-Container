@@ -100,13 +100,13 @@ mkdir -p $HOME/powershell/7 && cd $HOME/powershell
 Now, you can download the PowerShell Core binaries:
 
 ```
-wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.0/powershell-7.1.0-linux-arm32.tar.gz
+wget https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-arm32.tar.gz
 ```
 
 You can customize this link to whatever version of PowerShell you want. Don't forget to change a specific path (*name of last directory, 7 in our case*) in previous and following command for each specific version of PowerShell Core you wish to run:
 
 ```
-tar zxf ./powershell-7.1.0-linux-arm32.tar.gz -C $HOME/powershell/7
+tar zxf ./powershell-7.1.3-linux-arm32.tar.gz -C $HOME/powershell/7
 ```
 
 For an easy use of PowerShell, you can execute:
@@ -152,7 +152,7 @@ pwsh
 if you see following outcome (*it may change overtime*)
 
 ```
-PowerShell 7.1.0
+PowerShell 7.1.3
 Copyright (c) Microsoft Corporation. All rights reserved.
 
 https://aka.ms/powershell
