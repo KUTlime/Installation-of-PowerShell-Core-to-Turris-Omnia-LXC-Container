@@ -197,4 +197,4 @@ $HOME/powershell/7/pwsh
 
 ## Credits
 
-All goes to PowerShell Core team. YOU ROCK!
+All goes to PowerShell team. YOU ROCK!
