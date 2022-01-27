@@ -1,4 +1,4 @@
-# Installation of PowerShell Core to Turris Omnia LXC Container
+# Installation of PowerShell to Turris Omnia LXC Container
 > This repo is a step-by-step tutorial how to install PowerShell Core to Turris Omnia LXC container. It's aiming to Windows/PowerShell oriented users which not familiar with SSH/Bash environment and the official tutorials from CZ.NIC are driving them crazy.
 
 ## Overview
@@ -6,7 +6,7 @@
 The installation consists of these steps:
 
 1. Create Debian LXC container
-2. Install prerequisites 
+2. Install prerequisites
 3. Deployment of PowerShell Core libraries to LXC container
 4. Hello world!
 
