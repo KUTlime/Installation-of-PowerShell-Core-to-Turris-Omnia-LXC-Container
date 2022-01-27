@@ -190,6 +190,38 @@ and execute the `pwsh` command here. Alternatively, you can use the full path cl
 $HOME/powershell/7/pwsh
 ```
 
+## Auto update of PowerShell via cron
+
+Create a shell script with following commands:
+
+```bash
+export PATH="$PATH:/usr/local/sbin"
+apt-get update
+apt-get upgrade -y
+apt-get autoclean
+echo "Updating PowerShell"
+URI=$(curl -s https://api.github.com/repos/PowerShell/PowerShell/releases/latest | jq -r '.assets[].browser_download_url' | grep "linux-arm32.tar.gz")
+wget -qO- $URI | tar zxf - -C $HOME/powershell/7
+```
+
+Place it to some location, e.g., `/root/installUpdate.sh`.
+
+In terminal, execute these commands:
+
+```bash
+apt-get install cron jq curl -y
+chmod +x /root/installUpdate.sh
+crontab -e
+```
+
+Insert a following line of code:
+
+```bash
+44 4 * * * /root/installUpdate.sh >> /var/log/updatejob.log 2>&1
+```
+
+This will execute the script every single day at 04:44.
+
 ## Links
 
 [PowerShell Core Releases](https://github.com/PowerShell/PowerShell/releases)<br>
