@@ -278,10 +278,20 @@ Prepare update
 crontab -e
 ```
 
-Insert a following line of code:
+Insert the following line of code:
 
 ```bash
 44 4 * * * /root/installUpdate.sh >> /var/log/updatejob.log 2>&1
+```
+
+Auto start container
+
+Edit file `/etc/config/lxc-auto`
+```bash
+
+config container
+        option name PowerShell
+        option timeout 60
 ```
 
 ## Links
