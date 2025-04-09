@@ -22,7 +22,7 @@ lxc-create -t download -n PowerShell
 ```
 
 - Distribution: **Debian**
-- Release: **Bullseye**
+- Release: **Bookworm**
 - Architecture: **armv7l** (that is seven and the lower "L" letter, not 1 (digit)
 
 Alternatively, you can use LuCI to create the LXC container. A distribution doesn't not really matter. This tutorial was tested on Debian but it would work more likely on other distributions.
